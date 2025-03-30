@@ -39,6 +39,7 @@ After analysing the [requirements,](#requirements) the following use-cases were 
 ### ARCHITECTURE
 The architecture spawned in the process of analysing [requirements,](#requirements) deriving [entities,](#entities) and developing the [use cases](#use_cases).
 <br>
+From observation, the most logical architecture that emerged was a DDD microservices architecture
 
 
 
