@@ -22,7 +22,7 @@ public final class ParkingSpot {
             return occupied;
         }
     }
-    public void enter(Vehicle vehicle) {
+    public void enter(Vehicle vehicle) throws InterruptedException {
         synchronized (lock){
             if (vehicle.vehicleType() != vehicleType) {
                 throw new IllegalArgumentException("Vehicle type mismatch");
@@ -32,6 +32,7 @@ public final class ParkingSpot {
                     lock.wait();
                 } catch (InterruptedException e) {
                     Thread.currentThread().interrupt();
+                    throw e;
                 }
             }
             this.occupied = true;
